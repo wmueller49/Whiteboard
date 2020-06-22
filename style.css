@@ -1,3 +1,45 @@
-canvas{
-	
+html{
+	font-family: sans-serif;
+}
+
+ul{
+	list-style-type: none;
+	text-align: center;
+}
+
+ul li{
+	display: inline;
+	font-size: 2em;
+	text-align: center;
+}
+
+select{
+	font-size: 1em;
+	font-weight: bold;
+	border: .05em solid black;
+}
+
+a{
+	padding:.2em;
+	border: .05em solid black;
+}
+
+a:hover{
+	color: gray;
+}
+
+a:active:hover{
+	order: .05em solid gray;
+}
+
+li:hover{
+	cursor: pointer;
+}
+
+canvas:hover{
+	cursor: crosshair;
+}
+
+input{
+	fill:red;
 }

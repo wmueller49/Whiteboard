@@ -5,9 +5,26 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Whiteboard</title>
 		<link href="style.css" rel="stylesheet">
+		<script src="https://unpkg.com/vanilla-picker@2"></script>
 	</head>
 
 	<body>
+		<ul id="interface">
+			<li>
+				<a id="parent">&#127912;</a>
+			</li>
+			<li>
+				<select id="brush" onchange="changeBrush()">
+					<option selected disabled>&#128396;</option>
+					<option onclick = "square()">&#x25A0;</option>
+					<option onclick = "circle()">&#x25CF;</option>
+					<option onclick = "eraser()">&#9003;</option>
+				</select>
+			</li>
+			<li>
+				<input type="range" min="4" max="50" value="8" class="slider" id="myRange">
+			</li>
+		</ul>
 		<canvas id = "myCanvas"></canvas>
 
 		<script src="script.js"></script>
