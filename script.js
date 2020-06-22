@@ -93,6 +93,10 @@ function draw(){
 		ctx.fillRect(canvasX, canvasY, cursorSize, cursorSize);
 	}
 	else if (isCircle){
+		if(!isEraser && colorVal == "#FFFFFF"){
+			colorVal = "#000000";
+		}
+
 		var radius = cursorSize/2 + 1;
 		ctx.beginPath();
 		ctx.arc(canvasX, canvasY, radius, 0, 2 * Math.PI, false);
