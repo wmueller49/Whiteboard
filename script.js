@@ -74,6 +74,7 @@ function circle(){
 function eraser(){
 	isSquare = true;
 	isCircle = false;
+	isEraser = true;
 
 	colorVal = "#FFFFFF";
 	document.getElementById("brush").style.color = "#000000";
@@ -86,6 +87,9 @@ function draw(){
 	ctx.fillStyle = colorVal;
 
 	if(isSquare){
+		if(!isEraser && colorVal == "#FFFFFF"){
+			colorVal = "#000000";
+		}
 		ctx.fillRect(canvasX, canvasY, cursorSize, cursorSize);
 	}
 	else if (isCircle){
